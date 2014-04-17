@@ -1,9 +1,59 @@
 extends layout
 
+block map
+  img(src="images/map.png" style="border-radius: 3px;")
+
+block lineup
+  .panel.pure-g-r
+    for val in studentBands
+      .pure-u-1-3 #{val.name}
+    for val in artists
+      .pure-u-1 name: #{val.name}, type: #{val.type}
+
+block food
+  .panel.pure-g-r
+    .pure-u-1 This has all dat food.  Can I get summa dat food info?
+
+block info
+  .panel.pure-g-r
+    .pure-u-1 This has all dat information.  I'd like more information.  Yes.
+
+block footer
+  p This is da footer
+
 block sidebar
   .opener
     img(src="images/logo.svg" height=250 width=250)
 
-block content
+block main
   .main
-    p Main
+    .pure-g-r
+      .section.pure-u-1
+        block map
+      .section.pure-u-1
+        block lineup
+      .section.pure-u-1
+        block food
+      .section.pure-u-1
+        block info
+      .pure-u-1
+        block footer
+  script.
+    var schemes = [
+      Trianglify.colorbrewer.PuBu[6],
+      Trianglify.colorbrewer.RdPu[6],
+      Trianglify.colorbrewer.YlGn[6],
+      Trianglify.colorbrewer.Greys[6],
+    ];
+
+    var i=0;
+    d3.selectAll('.section').attr('style', function() {
+      var t = new Trianglify({
+        x_gradient: schemes[i++],
+        noiseIntensity: 0,
+        cellsize: 90  
+      });
+
+      var pattern = t.generate( this.offsetWidth , this.offsetHeight );
+      return 'background-image: ' + pattern.dataUrl;
+    });
