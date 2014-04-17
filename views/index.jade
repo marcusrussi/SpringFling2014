@@ -4,11 +4,31 @@ block map
   img(src="images/map.png" style="border-radius: 3px;")
 
 block lineup
-  .panel.pure-g-r
-    for val in studentBands
-      .pure-u-1-3 #{val.name}
-    for val in artists
-      .pure-u-1 name: #{val.name}, type: #{val.type}
+  .pure-g-r
+    for band in studentBands
+      .pure-u-1-3
+        .band(style="background-image: url('#{band.image}')")
+          .time #{band.startTime}
+          .clear
+          .name #{band.name}
+    for band in artists
+      if band.student
+        .pure-u-1-5
+        .pure-u-3-5
+          .band.student(style="background-image: url('#{band.image}')")
+            .time #{band.startTime}
+            .clear
+            .name #{band.name}
+        .pure-u-1-5
+      else
+        .pure-u-1-5
+        .pure-u-3-5  
+          .band.headliner(style="background-image: url('#{band.image}')")
+            .time #{band.startTime}
+            .clear
+            .name #{band.name}
+        .pure-u-1-5
+
 
 block food
   .panel.pure-g-r
@@ -19,7 +39,7 @@ block info
     .pure-u-1 This has all dat information.  I'd like more information.  Yes.
 
 block footer
-  p This is da footer
+  p Copy Rights By Marcus Russi And Isaac Morrier!!!! ç 2014!
 
 block sidebar
   .opener
