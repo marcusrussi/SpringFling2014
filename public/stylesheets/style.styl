@@ -17,6 +17,7 @@ layer()
   layer 1
   position absolute
   margin-top 25em
+  margin-bottom 5em
   background-color white
 
 .opener
@@ -26,6 +27,14 @@ layer()
   text-align center
   padding-top 5em
   background-color rgb(47, 65, 147)
+
+.footer
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  margin-bottom 1em
+  color rgb(47, 65, 147) - 40%
 
 .panel
   background-color rgba(0, 0, 0, 0.9)
@@ -39,6 +48,12 @@ layer()
   background-position center
   background-repeat no-repeat
   background-size cover
+  transition: all 200ms ease-in-out 0ms
+  &:hover
+    -webkit-transform: rotateX(0deg) rotateY(12deg) rotateZ(6deg);
+    -webkit-transform: scale3d(1, 1, 1);
+    -webkit-transform: translate3d(-10px, 10px, 0px);
+    -webkit-transform: skew(0deg, 0deg);
 
 .student
   min-height 8em

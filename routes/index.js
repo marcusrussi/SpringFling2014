@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
   var data = {
     title: 'Spring Fling 2014',
     studentBands: [
-      {name: 'Student Band #1',type: 'student band', startTime: '3:00pm', image: 'images/placeholder.gif'},
+      {name: '',type: 'student band', startTime: '3:00pm', image: 'images/placeholder.png'},
       {name: 'The Rain Brigade', type: 'student band', startTime: '3:45pm', image: 'images/therainbrigade.jpg'},
       {name: 'Nero, My Panda', type: 'student band', startTime: '4:30pm', image: 'images/neromypanda.jpg'},
     ],

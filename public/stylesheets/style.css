@@ -1,3 +1,6 @@
+* {
+  font-family: "museo-slab", serif;
+}
 .section {
   padding: 5%;
 }
@@ -11,6 +14,7 @@
   height: auto;
   position: absolute;
   margin-top: 25em;
+  margin-bottom: 5em;
   background-color: #fff;
 }
 .opener {
@@ -26,20 +30,33 @@
   padding-top: 5em;
   background-color: #2f4193;
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 1em;
+  color: #1c2758;
+}
 .panel {
   background-color: rgba(0,0,0,0.9);
   color: #fff;
   padding: 5%;
-  border-radius: 3px;
 }
 .band {
-  margin-top: 5%;
+  margin: 5%;
   min-height: 18em;
-  border-radius: 4px;
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 200ms ease-in-out 0ms;
+}
+.band:hover {
+  -webkit-transform: rotateX(0deg) rotateY(12deg) rotateZ(6deg);
+  -webkit-transform: scale3d(1, 1, 1);
+  -webkit-transform: translate3d(-10px, 10px, 0px);
+  -webkit-transform: skew(0deg, 0deg);
 }
 .student {
   min-height: 8em;
