@@ -36,7 +36,7 @@
   left: 0;
   right: 0;
   margin-bottom: 1em;
-  color: #1c2758;
+  color: #6f81d1;
 }
 .panel {
   background-color: rgba(0,0,0,0.9);
@@ -44,27 +44,30 @@
   padding: 5%;
 }
 .band {
-  margin: 5%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 18em;
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 200ms ease-in 1000ms;
 }
-.band:hover {
-  transition: all 200ms ease-in 0ms;
+.relative {
+  position: relative;
+}
+.sound {
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  margin-right: 5%;
 }
 .student {
-  min-height: 8em;
-}
-.student:hover {
-  min-height: 12em;
+  height: 8em;
 }
 .headliner {
-  min-height: 25em;
-}
-.headliner:hover {
-  min-height: 29em;
+  height: 25em;
 }
 .time {
   position: relative;
@@ -74,6 +77,7 @@
   color: #fff;
   padding: 10px;
   display: inline;
+  opacity: 0.67;
 }
 .headliner > .time {
   font-size: 2em;
@@ -89,10 +93,20 @@
   color: #fff;
   padding: 10px;
   display: inline;
+  opacity: 0.8;
 }
 .clear {
   clear: both;
   display: block;
   content: "";
   width: 100%;
+}
+.foodtruck {
+  max-width: 10em;
+  max-height: 10em;
+  margin: 1em;
+  display: inline-block;
+}
+.yaledining {
+  background-color: rgba(130,213,130,0.7);
 }

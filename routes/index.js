@@ -40,6 +40,7 @@ router.get('/', function(req, res) {
         name: 'Nick Mars', 
         type: 'student dj', 
         startTime: '5:40pm', 
+        image: 'images/nickmars.jpg',
         student: true,
         soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/12939707&amp;auto_play=false&amp;hide_related=false&amp;visual=true'
       },
@@ -68,6 +69,7 @@ router.get('/', function(req, res) {
       {
         name: 'Thomas Rokholt', 
         type: 'student dj', 
+        image: 'images/rockholt.jpg',
         startTime: '8:35pm', 
         student: true
       },
@@ -79,7 +81,28 @@ router.get('/', function(req, res) {
         soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/16730&amp;auto_play=false&amp;hide_related=false&amp;visual=true' 
       }
     ],
-
+    foodTrucks: [
+      {
+        name: 'Ay! Arepa',
+        image: 'images/ayarepa.jpg',
+      },
+      {
+        name: 'Caesus Cheese Truck',
+        image: 'images/caesus.jpg',
+      },
+      {
+        name: 'Food Encounters LLC',
+        image: 'images/foodencounters.png'
+      },
+      {
+        name: 'Fryborg',
+        image: 'images/fryborg.png'
+      },
+      {
+        name: 'Tacuba',
+        image: 'images/tacuba.jpg'
+      }
+    ]
   };
   
   res.render('index', data);

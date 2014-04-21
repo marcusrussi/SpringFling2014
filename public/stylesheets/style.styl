@@ -34,7 +34,7 @@ layer()
   left 0
   right 0
   margin-bottom 1em
-  color rgb(47, 65, 147) - 40%
+  color rgb(47, 65, 147) + 40%
 
 .panel
   background-color rgba(0, 0, 0, 0.9)
@@ -42,24 +42,30 @@ layer()
   padding 5%
 
 .band
-  margin  5%
+  margin-top 5%
+  margin-left 5%
+  margin-right 5%
+  height 18em
   background-color white
   background-position center
   background-repeat no-repeat
   background-size cover
-  transition: all 200ms ease-in 1000ms
-  &:hover
-    transition: all 200ms ease-in 0ms
+
+.relative
+  position relative
+
+.sound
+  display block
+  position absolute
+  bottom -4px
+  right 0
+  margin-right 5%
 
 .student
-  min-height 8em
-  &:hover
-    min-height 12em
+  height 8em
 
 .headliner
-  min-height 25em
-  &:hover
-    min-height 29em
+  height 25em
 
 .time
   position relative
@@ -69,6 +75,7 @@ layer()
   color white
   padding 10px
   display inline
+  opacity 0.67
 
 .headliner > .time
   font-size 2em
@@ -84,9 +91,19 @@ layer()
   color white
   padding 10px
   display inline
+  opacity 0.8
 
 .clear
   clear both
   display block
   content ""
   width 100%
+
+.foodtruck
+  max-width 10em
+  max-height 10em
+  margin 1em
+  display inline-block
+
+.yaledining
+  background-color rgba( 130, 213, 130, 0.7 )

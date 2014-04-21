@@ -6,49 +6,77 @@ block map
 block lineup
   .pure-g-r
     for band in studentBands
-      .pure-u-1-3
+      .pure-u-1-3.relative
         .band(style="background-image: url('#{band.image}')")
           .time #{band.startTime}
           .clear
           .name #{band.name}
           if band.soundcloud
-              iframe(width=100% height=300 scrolling='no' frameborder='no' src=band.soundcloud)
+            .sound
+              iframe(width="75" height="75" scrolling="no" frameborder="no" src="#{band.soundcloud}")
+
     for band in artists
       if band.student
         .pure-u-1-5
-        .pure-u-3-5
+        .pure-u-3-5.relative
           .band.student(style="background-image: url('#{band.image}')")
             .time #{band.startTime}
             .clear
             .name #{band.name}
             if band.soundcloud
-              iframe(width=100% height=300 scrolling='no' frameborder='no' src=band.soundcloud)
+              .sound
+                iframe(width="75" height="75" scrolling="no" frameborder="no" src="#{band.soundcloud}")
         .pure-u-1-5
       else
         .pure-u-1-5
-        .pure-u-3-5  
+        .pure-u-3-5.relative
           .band.headliner(style="background-image: url('#{band.image}')")
             .time #{band.startTime}
             .clear
             .name #{band.name}
             if band.soundcloud
-              iframe(width=100% height=300 scrolling='no' frameborder='no' src=band.soundcloud)
+              .sound
+                iframe(width="75" height="75" scrolling="no" frameborder="no" src="#{band.soundcloud}")
         .pure-u-1-5
 
 
 block food
-  .panel.pure-g-r
-    .pure-u-1 This has all dat food.  Can I get summa dat food info?
+  .pure-g-r
+    .pure-u-1
+      h1 Food
+    .pure-u-1-5 This year, food will be availabe from the following vendors, as well as Yale Dining
+    .pure-u-4-5
+      for truck in foodTrucks
+        .foodtruck
+          img(src="#{truck.image}")
+    .pure-u-1-4.yaledining
+      h2(style="padding-left: 10px;") Yale Dining
+    .pure-u-1-4.yaledining
+      p
+        strong Beer Garden 4-8pm
+      p 3 free beers for all students 21+
+
+    .pure-u-1-2.yaledining
+      p
+        strong Dinner 4:30-6:30pm
+      p Grilled Hamburgers/Cheeseburger
+      p Veggie Burger
+      p BBQ Chicken Thighs
+      p Pulled Pork and Slaw Sandwich
+      p Chips and Fruit Salad
+      p Pasta Salad, Corn, Black Bean and Edamame Salad
+      p Cookies
 
 block info
   .panel.pure-g-r
-    .pure-u-1 This has all dat information.  I'd like more information.  Yes.
+    .pure-u-1.
+      Guest policy: All Yale students enter with a Yale ID and can bring ONE guest into the venue – Yale students MUST enter and exit Old Campus with their guest.
 
 block sidebar
   .opener
     img(src="images/logo.svg" height=250 width=250)
-    .footer
-      |• Yale Spring Fling ‘14 Production &amp; Design Team • Marcus Russi • Isaac Morrier •
+    .footer.
+      • Yale Spring Fling ‘14 Production &amp; Design Team • Marcus Russi • Isaac Morrier •
 
 block main
   .main
@@ -63,21 +91,23 @@ block main
         block info
 
   script.
-    var schemes = [
-      Trianglify.colorbrewer.PuBu[6],
-      Trianglify.colorbrewer.RdPu[6],
-      Trianglify.colorbrewer.YlGn[6],
-      Trianglify.colorbrewer.Greys[6],
-    ];
+    window.onload = function() {
+      var schemes = [
+        Trianglify.colorbrewer.PuBu[6],
+        Trianglify.colorbrewer.RdPu[6],
+        Trianglify.colorbrewer.YlGn[6],
+        Trianglify.colorbrewer.Greys[6],
+      ];
 
-    var i=0;
-    d3.selectAll('.section').attr('style', function() {
-      var t = new Trianglify({
-        x_gradient: schemes[i++],
-        noiseIntensity: 0,
-        cellsize: 90  
+      var i=0;
+      d3.selectAll('.section').attr('style', function() {
+        var t = new Trianglify({
+          x_gradient: schemes[i++],
+          noiseIntensity: 0,
+          cellsize: 90  
+        });
+
+        var pattern = t.generate( this.offsetWidth , this.offsetHeight );
+        return 'background-image: ' + pattern.dataUrl;
       });
-
-      var pattern = t.generate( this.offsetWidth , this.offsetHeight );
-      return 'background-image: ' + pattern.dataUrl;
-    });
+    }
