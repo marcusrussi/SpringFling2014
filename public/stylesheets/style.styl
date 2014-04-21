@@ -43,23 +43,23 @@ layer()
 
 .band
   margin  5%
-  min-height 18em
   background-color white
   background-position center
   background-repeat no-repeat
   background-size cover
-  transition: all 200ms ease-in-out 0ms
+  transition: all 200ms ease-in 1000ms
   &:hover
-    -webkit-transform: rotateX(0deg) rotateY(12deg) rotateZ(6deg);
-    -webkit-transform: scale3d(1, 1, 1);
-    -webkit-transform: translate3d(-10px, 10px, 0px);
-    -webkit-transform: skew(0deg, 0deg);
+    transition: all 200ms ease-in 0ms
 
 .student
   min-height 8em
+  &:hover
+    min-height 12em
 
 .headliner
   min-height 25em
+  &:hover
+    min-height 29em
 
 .time
   position relative
