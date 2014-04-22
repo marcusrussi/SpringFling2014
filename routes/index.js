@@ -84,12 +84,16 @@ router.get('/', function(req, res) {
     foodTrucks: [
       {
         name: 'Ay! Arepa',
-        image: 'images/ayarepa.jpg',
+        image: 'images/ayarepa.png',
       },
       {
         name: 'Caesus Cheese Truck',
-        image: 'images/caesus.jpg',
+        image: 'images/caseus.png',
       },
+      {
+        name: 'Elm City Kettle Corn',
+        image: 'images/kettlecorn.png'
+      }
       // {
       //   name: 'Food Encounters LLC',
       //   image: 'images/foodencounters.png'
