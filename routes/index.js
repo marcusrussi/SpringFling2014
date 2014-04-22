@@ -67,7 +67,7 @@ router.get('/', function(req, res) {
         soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6969243&amp;auto_play=false&amp;hide_related=false&amp;visual=true'
       },
       {
-        name: 'Thomas Rokholt/towr', 
+        name: 'towr', 
         type: 'student dj', 
         image: 'images/rockholt.jpg',
         startTime: '8:35pm', 
