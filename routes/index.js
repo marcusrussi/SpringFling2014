@@ -90,18 +90,18 @@ router.get('/', function(req, res) {
         name: 'Caesus Cheese Truck',
         image: 'images/caesus.jpg',
       },
-      {
-        name: 'Food Encounters LLC',
-        image: 'images/foodencounters.png'
-      },
-      {
-        name: 'Fryborg',
-        image: 'images/fryborg.png'
-      },
-      {
-        name: 'Tacuba',
-        image: 'images/tacuba.jpg'
-      }
+      // {
+      //   name: 'Food Encounters LLC',
+      //   image: 'images/foodencounters.png'
+      // },
+      // {
+      //   name: 'Fryborg',
+      //   image: 'images/fryborg.png'
+      // },
+      // {
+      //   name: 'Tacuba',
+      //   image: 'images/tacuba.jpg'
+      // }
     ]
   };
   
