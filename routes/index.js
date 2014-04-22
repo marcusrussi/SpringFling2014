@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     title: 'Spring Fling 2014',
     studentBands: [
       {
-        name: '', 
+        name: 'TBD', 
         type: 'student band', 
         startTime: '3:00pm', 
         image: 'images/placeholder.png'
