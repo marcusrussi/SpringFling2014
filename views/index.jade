@@ -17,8 +17,8 @@ block lineup
 
     for band in artists
       if band.student
-        .pure-u-1-8
-        .pure-u-1-2.relative
+        .pure-u-1-5
+        .pure-u-3-5.relative
           .band.student(style="background-image: url('#{band.image}')")
             .time #{band.startTime}
             .clear
@@ -26,7 +26,7 @@ block lineup
             if band.soundcloud
               .sound
                 iframe(width="75" height="75" scrolling="no" frameborder="no" src="#{band.soundcloud}")
-        .pure-u-3-8
+        .pure-u-1-5
       else
         .pure-u-1-5
         .pure-u-3-5.relative
