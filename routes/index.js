@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     title: 'Spring Fling 2014',
     studentBands: [
       {
-        name: 'TBD', 
+        name: 'Elgin and the Tonics', 
         type: 'student band', 
         startTime: '3:00pm', 
         image: 'images/placeholder.png'
@@ -60,11 +60,11 @@ router.get('/', function(req, res) {
         soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/42623980&amp;auto_play=false&amp;hide_related=false&amp;visual=true'
       },
       {
-        name: 'Chance the Rapper', 
+        name: 'Ja Rule', 
         type: 'headliner', 
         startTime: '7:30pm', 
-        image: 'images/chance.jpg',
-        soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6969243&amp;auto_play=false&amp;hide_related=false&amp;visual=true'
+        image: 'images/jarule.jpg'
+        // soundcloud: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6969243&amp;auto_play=false&amp;hide_related=false&amp;visual=true'
       },
       {
         name: 'towr', 

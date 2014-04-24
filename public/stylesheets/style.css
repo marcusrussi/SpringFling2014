@@ -18,11 +18,11 @@
   background-color: #fff;
 }
 .opener {
-  z-index:; 0;
-  top:; 0;
-  right:; 0;
-  left:; 0;
-  width:; auto;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
   height: auto;
   bottom: 0;
   position: fixed;
