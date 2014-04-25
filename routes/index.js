@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
         name: 'Elgin and the Tonics', 
         type: 'student band', 
         startTime: '3:00pm', 
-        image: 'images/placeholder.png'
+        image: 'images/elgin.jpg'
       },
       {
         name: 'The Rain Brigade', 
